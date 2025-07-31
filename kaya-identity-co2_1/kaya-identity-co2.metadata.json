@@ -1,0 +1,155 @@
+{
+  "chart": {
+    "title": "Kaya identity: drivers of CO₂ emissions",
+    "subtitle": "Percentage change in the four parameters of the Kaya Identity, which determine total CO₂ emissions. Emissions from [fossil fuels and industry](#dod:fossilemissions) are included. Land-use change emissions are not included.",
+    "note": "GDP per capita is measured in 2011 [international-$](#dod:int_dollar_abbreviation) (PPP). This adjusts for inflation and cross-country price differences.",
+    "citation": "Global Carbon Budget (2024) and other sources",
+    "originalChartUrl": "https://ourworldindata.org/grapher/kaya-identity-co2?v=1&csvType=full&useColumnShortNames=false",
+    "selection": [
+      "World"
+    ]
+  },
+  "columns": {
+    "Annual CO₂ emissions": {
+      "titleShort": "CO₂ emissions",
+      "titleLong": "CO₂ emissions",
+      "descriptionShort": "Annual total emissions of carbon dioxide (CO₂), excluding land-use change, measured in tonnes.",
+      "descriptionKey": [
+        "This data is based on territorial emissions, meaning the emissions produced within a country's borders, but not those from imported goods. For example, emissions from imported steel are counted in the country where the steel is produced. To learn more and look at emissions adjusted for trade, read our article: [How do CO₂ emissions compare when we adjust for trade?](https://ourworldindata.org/consumption-based-co2)",
+        "Emissions from international aviation and shipping are not included in the data for any individual country or region. They are only counted in the global total."
+      ],
+      "descriptionProcessing": "- Global emissions are converted from tonnes of carbon to tonnes of carbon dioxide (CO₂) using a factor of 3.664. This is the conversion factor [recommended by the Global Carbon Project](https://globalcarbonbudgetdata.org/downloads/jGJH0-data/Global+Carbon+Budget+v2024+Dataset+Descriptions.pdf). It reflects that one tonne of carbon, when fully oxidized, forms 3.664 tonnes of CO₂, based on the relative molecular weights of carbon and oxygen in CO₂.\n- Emissions from the 1991 Kuwaiti oil fires are included in Kuwait's emissions for that year.\n",
+      "shortUnit": "t",
+      "unit": "tonnes",
+      "timespan": "1750-2023",
+      "type": "Numeric",
+      "owidVariableId": 998397,
+      "shortName": "emissions_total",
+      "lastUpdated": "2024-11-21",
+      "nextUpdate": "2025-11-21",
+      "citationShort": "Global Carbon Budget (2024) – with major processing by Our World in Data",
+      "citationLong": "Global Carbon Budget (2024) – with major processing by Our World in Data. “CO₂ emissions” [dataset]. Global Carbon Project, “Global Carbon Budget” [original data].",
+      "fullMetadata": "https://api.ourworldindata.org/v1/indicators/998397.metadata.json"
+    },
+    "Primary energy consumption per GDP (kWh/$)": {
+      "titleShort": "Primary energy consumption per GDP",
+      "titleLong": "Primary energy consumption per GDP",
+      "descriptionShort": "Measured in kilowatt-hours per international-$.",
+      "descriptionKey": [
+        "The Maddison Project Database is based on the work of many researchers who have produced estimates of economic growth and population for individual countries. The full list of sources for this historical data is given in [the original dataset](https://dataverse.nl/api/access/datafile/421302).",
+        "Gross domestic product (GDP) is a measure of the total value added from the production of goods and services in a country or region each year.",
+        "This indicator provides information on economic growth and income levels in the _very long run_. Some country estimates are available as far back as 1 CE, and regional estimates as far back as 1820 CE.",
+        "This data is adjusted for inflation and for differences in living costs between countries.",
+        "This data is expressed in [international-$](#dod:int_dollar_abbreviation) at 2011 prices, using a combination of 2011 and 1990 PPPs for historical data.",
+        "Time series for former countries and territories are calculated forward in time by estimating values based on their last official borders.",
+        "For more regularly updated estimates of GDP per capita since 1990, see the [World Bank's indicator](https://ourworldindata.org/grapher/gdp-worldbank)."
+      ],
+      "descriptionProcessing": "- Primary energy consumption data was compiled based on two key data sources: [Energy Institute (EI) Statistical Review of World Energy](https://www.energyinst.org/statistical-review), and [International energy data from the U.S. Energy Information Administration (EIA)](https://www.eia.gov/international/data/world/total-energy/more-total-energy-data). EI provides the longest and most up-to-date time-series of primary energy. However, it does not provide data for all countries. We have therefore supplemented this dataset with energy data from the EIA. Where EI provides data for a given country, this data is adopted; for countries where this data is missing, we rely on EIA energy figures.\n- Per capita figures have been calculated using a population dataset that is based on [different sources](https://ourworldindata.org/population-sources).\n- To calculate energy per unit of GDP, we divide by total real GDP figures from [the Maddison Project Database](https://ourworldindata.org/grapher/gdp-maddison-project-database).\n",
+      "shortUnit": "kWh",
+      "unit": "kilowatt-hours per $",
+      "timespan": "1965-2022",
+      "type": "Numeric",
+      "owidVariableId": 1077550,
+      "shortName": "primary_energy_consumption_per_gdp__kwh_per_dollar",
+      "lastUpdated": "2025-06-27",
+      "nextUpdate": "2026-06-27",
+      "citationShort": "U.S. Energy Information Administration (2025); Energy Institute - Statistical Review of World Energy (2025); Bolt and van Zanden - Maddison Project Database 2023 – with major processing by Our World in Data",
+      "citationLong": "U.S. Energy Information Administration (2025); Energy Institute - Statistical Review of World Energy (2025); Bolt and van Zanden - Maddison Project Database 2023 – with major processing by Our World in Data. “Primary energy consumption per GDP” [dataset]. U.S. Energy Information Administration, “International Energy Data”; Energy Institute, “Statistical Review of World Energy”; Bolt and van Zanden, “Maddison Project Database 2023” [original data].",
+      "fullMetadata": "https://api.ourworldindata.org/v1/indicators/1077550.metadata.json"
+    },
+    "GDP per capita": {
+      "titleShort": "GDP per capita",
+      "titleLong": "GDP per capita - Maddison Project Database – In constant international-$. Historical data",
+      "descriptionShort": "Average economic output per person in a country or region per year. This data is adjusted for inflation and for differences in living costs between countries.",
+      "descriptionKey": [
+        "The Maddison Project Database is based on the work of many researchers who have produced estimates of economic growth and population for individual countries. The full list of sources for this historical data is given in [the original dataset](https://dataverse.nl/api/access/datafile/421302).",
+        "Gross domestic product (GDP) is a measure of the total value added from the production of goods and services in a country or region each year. GDP per capita is GDP divided by population.",
+        "This indicator provides information on economic growth and income levels in the _very long run_. Some country estimates are available as far back as 1 CE, and regional estimates as far back as 1820 CE.",
+        "This data is adjusted for inflation and for differences in living costs between countries.",
+        "This data is expressed in [international-$](#dod:int_dollar_abbreviation) at 2011 prices, using a combination of 2011 and 1990 PPPs for historical data.",
+        "Time series for former countries and territories are calculated forward in time by estimating values based on their last official borders.",
+        "For more regularly updated estimates of GDP per capita since 1990, see the [World Bank's indicator](https://ourworldindata.org/grapher/gdp-per-capita-worldbank)."
+      ],
+      "shortUnit": "$",
+      "unit": "international-$ in 2011 prices",
+      "timespan": "1-2022",
+      "type": "Numeric",
+      "owidVariableId": 900793,
+      "shortName": "gdp_per_capita",
+      "lastUpdated": "2024-04-26",
+      "nextUpdate": "2027-04-22",
+      "citationShort": "Bolt and van Zanden - Maddison Project Database 2023 – with minor processing by Our World in Data",
+      "citationLong": "Bolt and van Zanden - Maddison Project Database 2023 – with minor processing by Our World in Data. “GDP per capita – Maddison Project Database – In constant international-$. Historical data” [dataset]. Bolt and van Zanden, “Maddison Project Database 2023” [original data].",
+      "fullMetadata": "https://api.ourworldindata.org/v1/indicators/900793.metadata.json"
+    },
+    "900793-annotations": {
+      "titleShort": "900793-annotations",
+      "titleLong": "900793-annotations",
+      "type": "SeriesAnnotation",
+      "citationShort": " – processed by Our World in Data",
+      "citationLong": " – processed by Our World in Data. “900793-annotations” [dataset].",
+      "fullMetadata": "https://api.ourworldindata.org/v1/indicators/undefined.metadata.json"
+    },
+    "Population (historical)": {
+      "titleShort": "Population (historical)",
+      "titleLong": "Population (historical)",
+      "descriptionShort": "Population by country, available from 10,000 BCE to 2023, based on data and estimates from different sources.",
+      "descriptionProcessing": "The population data is constructed by combining data from multiple sources:\n\n- 10,000 BCE - 1799: Historical estimates by HYDE (v3.3).\n\n- 1800 - 1949: Historical estimates by Gapminder (v7).\n\n- 1950-2023: Population records by the UN World Population Prospects (2024 revision).",
+      "shortUnit": "",
+      "unit": "people",
+      "timespan": "-10000-2023",
+      "type": "Integer",
+      "owidVariableId": 953903,
+      "shortName": "population_historical",
+      "lastUpdated": "2024-07-15",
+      "nextUpdate": "2026-07-15",
+      "citationShort": "HYDE (2023); Gapminder (2022); UN WPP (2024) – with major processing by Our World in Data",
+      "citationLong": "HYDE (2023); Gapminder (2022); UN WPP (2024) – with major processing by Our World in Data. “Population (historical)” [dataset]. PBL Netherlands Environmental Assessment Agency, “History Database of the Global Environment 3.3”; Gapminder, “Population v7”; United Nations, “World Population Prospects”; Gapminder, “Systema Globalis” [original data].",
+      "fullMetadata": "https://api.ourworldindata.org/v1/indicators/953903.metadata.json"
+    },
+    "Annual CO₂ emissions per unit energy (kg per kilowatt-hour)": {
+      "titleShort": "Carbon intensity (CO₂ / energy)",
+      "titleLong": "Carbon intensity (CO₂ / energy)",
+      "descriptionShort": "Annual total emissions of carbon dioxide (CO₂), excluding land-use change, measured in kilograms per kilowatt-hour of primary energy consumption.",
+      "descriptionKey": [
+        "This data is based on territorial emissions, meaning the emissions produced within a country's borders, but not those from imported goods. For example, emissions from imported steel are counted in the country where the steel is produced. To learn more and look at emissions adjusted for trade, read our article: [How do CO₂ emissions compare when we adjust for trade?](https://ourworldindata.org/consumption-based-co2)",
+        "Emissions from international aviation and shipping are not included in the data for any individual country or region. They are only counted in the global total."
+      ],
+      "descriptionProcessing": "- Global emissions are converted from tonnes of carbon to tonnes of carbon dioxide (CO₂) using a factor of 3.664. This is the conversion factor [recommended by the Global Carbon Project](https://globalcarbonbudgetdata.org/downloads/jGJH0-data/Global+Carbon+Budget+v2024+Dataset+Descriptions.pdf). It reflects that one tonne of carbon, when fully oxidized, forms 3.664 tonnes of CO₂, based on the relative molecular weights of carbon and oxygen in CO₂.\n- Emissions from the 1991 Kuwaiti oil fires are included in Kuwait's emissions for that year.\n",
+      "shortUnit": "kg/kWh",
+      "unit": "kilograms per kilowatt-hour",
+      "timespan": "1965-2023",
+      "type": "Numeric",
+      "owidVariableId": 998406,
+      "shortName": "emissions_total_per_unit_energy",
+      "lastUpdated": "2024-11-21",
+      "nextUpdate": "2025-11-21",
+      "citationShort": "Global Carbon Budget (2024); U.S. Energy Information Administration (2023); Energy Institute - Statistical Review of World Energy (2024) – with major processing by Our World in Data",
+      "citationLong": "Global Carbon Budget (2024); U.S. Energy Information Administration (2023); Energy Institute - Statistical Review of World Energy (2024) – with major processing by Our World in Data. “Carbon intensity (CO₂ / energy)” [dataset]. Global Carbon Project, “Global Carbon Budget”; U.S. Energy Information Administration, “International Energy Data”; Energy Institute, “Statistical Review of World Energy” [original data].",
+      "fullMetadata": "https://api.ourworldindata.org/v1/indicators/998406.metadata.json"
+    },
+    "Annual CO₂ emissions per GDP (kg per international-$)": {
+      "titleShort": "Carbon intensity (CO₂ / $)",
+      "titleLong": "Carbon intensity (CO₂ / $)",
+      "descriptionShort": "Annual total emissions of carbon dioxide (CO₂), excluding land-use change, measured in kilograms per dollar of GDP (2011 international-$).",
+      "descriptionKey": [
+        "This data is based on territorial emissions, meaning the emissions produced within a country's borders, but not those from imported goods. For example, emissions from imported steel are counted in the country where the steel is produced. To learn more and look at emissions adjusted for trade, read our article: [How do CO₂ emissions compare when we adjust for trade?](https://ourworldindata.org/consumption-based-co2)",
+        "Emissions from international aviation and shipping are not included in the data for any individual country or region. They are only counted in the global total."
+      ],
+      "descriptionProcessing": "- Global emissions are converted from tonnes of carbon to tonnes of carbon dioxide (CO₂) using a factor of 3.664. This is the conversion factor [recommended by the Global Carbon Project](https://globalcarbonbudgetdata.org/downloads/jGJH0-data/Global+Carbon+Budget+v2024+Dataset+Descriptions.pdf). It reflects that one tonne of carbon, when fully oxidized, forms 3.664 tonnes of CO₂, based on the relative molecular weights of carbon and oxygen in CO₂.\n- Emissions from the 1991 Kuwaiti oil fires are included in Kuwait's emissions for that year.\n",
+      "shortUnit": "kg/$",
+      "unit": "kilograms per international-$",
+      "timespan": "1820-2022",
+      "type": "Numeric",
+      "owidVariableId": 998405,
+      "shortName": "emissions_total_per_gdp",
+      "lastUpdated": "2024-11-21",
+      "nextUpdate": "2025-11-21",
+      "citationShort": "Global Carbon Budget (2024); Bolt and van Zanden - Maddison Project Database 2023 – with major processing by Our World in Data",
+      "citationLong": "Global Carbon Budget (2024); Bolt and van Zanden - Maddison Project Database 2023 – with major processing by Our World in Data. “Carbon intensity (CO₂ / $)” [dataset]. Global Carbon Project, “Global Carbon Budget”; Bolt and van Zanden, “Maddison Project Database 2023” [original data].",
+      "fullMetadata": "https://api.ourworldindata.org/v1/indicators/998405.metadata.json"
+    }
+  },
+  "dateDownloaded": "2025-07-17",
+  "activeFilters": {}
+}
