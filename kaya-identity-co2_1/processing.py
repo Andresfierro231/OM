@@ -1,37 +1,73 @@
 import pandas as pd
+import matplotlib.pyplot as plt
+import os
 
 
 df = pd.read_csv("kaya-identity-co2.csv", quotechar='"') # , on_bad_lines="skip"
 print(df.columns)
 
 
-am_I_reading = False 
-# 
+
+# Load CSV with appropriate quoting
+df = pd.read_csv("kaya-identity-co2.csv", quotechar='"')
+
+# Strip any leading/trailing whitespace from column names
+df.columns = df.columns.str.strip()
+
+# Filter by year
+df = df[(df["Year"] >= 1990) & (df["Year"] <= 2023)]
+
+# Create output folder for plots
+output_dir = "entity_plots"
+os.makedirs(output_dir, exist_ok=True)
+
+# List of columns to plot (exclude Entity, Code, Year)
+plot_columns = [col for col in df.columns if col not in ["Entity", "Code", "Year"]]
+
+# Group by Entity
+for entity, group in df.groupby("Entity"):
+    # Sort by Year just in case
+    group = group.sort_values("Year")
+    
+    # Generate one plot per variable
+    for col in plot_columns:
+        # Skip if the column is entirely NaN
+        if group[col].dropna().empty:
+            continue
+        
+        plt.figure(figsize=(10, 6))
+        plt.plot(group["Year"], group[col], marker='o', linestyle='-', label=col)
+        plt.title(f"{entity}: {col}")
+        plt.xlabel("Year")
+        plt.ylabel(col)
+        plt.grid(True)
+        plt.tight_layout()
+        
+        # Sanitize filename
+        safe_entity = entity.replace(" ", "_").replace("/", "-")
+        safe_col = col.replace(" ", "_").replace("/", "-")
+        filename = f"{safe_entity}__{safe_col}.png"
+        filepath = os.path.join(output_dir, filename)
+        
+        plt.savefig(filepath)
+        plt.close()
+
+print(f"✅ Plots saved to: {output_dir}")
 
 
+# Column names: 
+# ['Entity', 
+# 'Code', 
+# 'Year', 
+# 'Annual CO₂ emissions', 
+# 'Primary energy consumption per GDP (kWh/$)', 
+# 'GDP per capita', 
+# '900793-annotations', 
+# 'Population (historical)', 
+# 'Annual CO₂ emissions per unit energy (kg per kilowatt-hour)', 
+# 'Annual CO₂ emissions per GDP (kg per international-$)']
 
-
-
-# Checks if you are able to read your csv file
-if am_I_reading: 
-    # 🔍 Print column names and number of columns
-    print("Column names:", df.columns.tolist())
-    print("Number of columns:", len(df.columns))
-
-    # ✅ Check that every row has the same number of columns
-    # This finds any rows with missing or extra columns (NaNs mean missing values)
-    row_lengths = df.apply(lambda row: row.count(), axis=1)  # counts non-NaN fields per row
-    print("\nSummary of non-null fields per row:")
-    print(row_lengths.value_counts().sort_index())
-
-    # Optional: flag any rows with fewer or more non-null fields
-    expected_columns = len(df.columns)
-    bad_rows = df[row_lengths != expected_columns]
-    print(f"\nNumber of rows with incomplete data: {len(bad_rows)}")
-
-    print(f"\nTotal rows: {len(df)}")
-
-
+# Number of columns: 10
 
 # # Load the dataset
 # df = pd.read_csv("kaya-identity-co2.csv")
